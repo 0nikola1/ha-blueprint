@@ -57,7 +57,7 @@ blueprint:
     motion_sensor_time_on:
       name: motion_sensor_time_on (seconds)
       description: motion sensor time on to trigger
-      default: "10"
+      default: 10
       selector:
         number:
             min: 0
@@ -88,7 +88,7 @@ condition:
   - condition: numeric_state
     entity_id: !input motion_sensor
     attribute: event_length
-    above:  "{{ motion_sensor_time_on }}"
+    above: !input motion_sensor_time_on
     
 action:
   - delay: "{{ delay }}"
