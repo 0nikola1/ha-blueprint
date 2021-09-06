@@ -88,7 +88,8 @@ condition:
   - condition: numeric_state
     entity_id: !input motion_sensor
     attribute: event_length
-    above:  "{{ delay }}"
+    above:  "{{ motion_sensor_time_on }}"
+    
 action:
   - delay: "{{ delay }}"
 
