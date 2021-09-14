@@ -50,8 +50,7 @@ blueprint:
 variables:
   day: !input 'day'
   threshold: !input 'threshold'
-  include: !input '
-  ude'
+  include: !input 'incude'
   sensors: >-
     {% set result = namespace(sensors=[]) %}
     {% for state in states.sensor | selectattr('attributes.device_class', '==', 'battery') %}
