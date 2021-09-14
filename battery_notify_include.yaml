@@ -47,7 +47,6 @@ blueprint:
         the names of sensors being low on battery.
       selector:
         action: {}
-  source_url: 
 variables:
   day: !input 'day'
   threshold: !input 'threshold'
